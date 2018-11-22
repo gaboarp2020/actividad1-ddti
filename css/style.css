@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a, p, button, h1, h2, h3, h4, h5, input, label, nav {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin-left: 1rem;
+}
+
+label, h2 {
+    color: #5a5a5a;
+}
+
+label {
+    margin-left: 4px;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+header {
+    height: min-content;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+}
+
+.user-info img {
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.user-info img:hover {
+    animation-name: rotate; 
+    animation-duration: 1s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.user-info p {
+    font-size: 200%;
+    text-align: center;
+}
+
+.user-info a {
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+    color: rgb(226, 44, 44);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    padding: 25px 15px 25px 50px;
+    border: solid 1px rgb(230, 230, 230);
+    border-radius: 4px;
+    background-image: linear-gradient(to right, rgb(246, 246, 246), rgb(236, 236, 236));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    width: 20%;
+    min-width: 280px;
+    display: grid;
+    align-content: center;
+}
+
+input {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    width: 85%;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-indent: 10px;
+}
+
+.botones {
+    padding: 5px 12px;
+}
+
+a, button {
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #57a5e0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #57a5e0; 
+    text-decoration: none;
+    color: #F2F2F2;
+    transition: 0.4s;
+}
+
+.botones a, button:hover {
+    border: 1px solid #0e95fc;
+    background-color: #0e95fc; 
+}
+
+.spaceBackground{
+    background-image: url('../image/espacio.gif');
+    background-size: cover;
+}
+
+.Lightsaber #LightsaberOff {
+    height: 70px;
+    width: 13px;
+}
+
+.Lightsaber #LightsaberGreen {
+    height: 310px;
+    width: 100px;
+}
+
+.Lightsaber #LightsaberRed {
+    height: 310px;
+    width: 100px;
+}
+
+#LightsaberGreen, #LightsaberRed {
+    display: none;
+}
+
+.Lightsaber:hover {
+    cursor: pointer;
+}
